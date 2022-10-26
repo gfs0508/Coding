@@ -1,6 +1,6 @@
 <h1 align=center>
 Python Projects - Coding
-<h1>
+</h1>
 
 <p align=center>  
 <a>About | Versions and Updates</a>
