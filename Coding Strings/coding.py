@@ -1,5 +1,5 @@
 # Coding System created by GFS-0508
-# For more details visit: 
+# For more details visit: https://github.com/GFS-0508/Python-Projects/tree/main/Coding%20Strings
 # Visit my GitHub please: https://github.com/GFS-0508
 
 class code:
