@@ -1,124 +1,344 @@
 # Coding System created by GFS-0508
-# For more details visit: https://github.com/GFS-0508/Python-Projects/tree/main/Coding%20Strings
+# For more details visit: 
 # Visit my GitHub please: https://github.com/GFS-0508
 
 class code:
-    def encoder(string_TOenc):
-        string_enc = " "
-        for pos,char in enumerate(string_TOenc):
-            if(char == " "):
-                string_enc = string_enc + "0"
-            if(char == "a"):
-                string_enc = string_enc + "1"
-            if(char == "b"):
-                string_enc = string_enc + "2"
-            if(char == "c"):
-                string_enc = string_enc + "3"
-            if(char == "d"):
-                string_enc = string_enc + "4"
-            if(char == "e"):
-                string_enc = string_enc + "5"
-            if(char == "f"):
-                string_enc = string_enc + "6"
-            if(char == "g"):
-                string_enc = string_enc + "7"
-            if(char == "h"):
-                string_enc = string_enc + "8"
-            if(char == "i"):
-                string_enc = string_enc + "9"
-            if(char == "j"):
-                string_enc = string_enc + "A"
-            if(char == "k"):
-                string_enc = string_enc + "B"
-            if(char == "l"):
-                string_enc = string_enc + "C"
-            if(char == "m"):
-                string_enc = string_enc + "D"
-            if(char == "n"):
-                string_enc = string_enc + "E"
-            if(char == "o"):
-                string_enc = string_enc + "F"
-            if(char == "p"):
-                string_enc = string_enc + "G"
-            if(char == "q"):
-                string_enc = string_enc + "H"
-            if(char == "r"):
-                string_enc = string_enc + "I"
-            if(char == "s"):
-                string_enc = string_enc + "J"
-            if(char == "t"):
-                string_enc = string_enc + "K"
-            if(char == "u"):
-                string_enc = string_enc + "L"
-            if(char == "v"):
-                string_enc = string_enc + "M"
-            if(char == "w"):
-                string_enc = string_enc + "N"
-            if(char == "x"):
-                string_enc = string_enc + "O"
-            if(char == "y"):
-                string_enc = string_enc + "P"
-            if(char == "z"):
-                string_enc = string_enc + "Q"
+    def encoder(string_TOenc, mode):
+        if (mode == "s" or mode == "string"):
+            string = " "
+            for pos,char in enumerate(string_TOenc):
+                # --------------------------
+                if(char == " "):
+                    string = string + "0"
+                elif(char == "\n"):
+                    string = string + "1"
+                elif(char == "_"):
+                    string = string + "2"
+                elif(char == "-"):
+                    string = string + "3"
+                elif(char == "."):
+                    string = string + "4"
+                elif(char == ":"):
+                    string = string + "5"
+                elif(char == "-"):
+                    string = string + "6"
+                elif(char == ","):
+                    string = string + "7"
+                elif(char == ";"):
+                    string = string + "8"
+                elif(char == '"'):
+                    string = string + "9"
+                # --------------------------
 
-        return string_enc
+                # --------------------------
+                elif(char == "a"):
+                    string = string + "p"
+                elif(char == "A"):
+                    string = string + "o" 
+
+                elif(char == "b"):
+                    string = string + "i"
+                elif(char == "B"):
+                    string = string + "u"
+
+                elif(char == "c"):
+                    string = string + "y"
+                elif(char == "C"):
+                    string = string + "t"
+
+                elif(char == "d"):
+                    string = string + "r"
+                elif(char == "D"):
+                    string = string + "e"
+
+                elif(char == "e"):
+                    string = string + "w"
+                elif(char == "E"):
+                    string = string + "q"
+                
+                elif(char == "f"):
+                    string = string + "P"
+                elif(char == "F"):
+                    string = string + "O"
+
+                elif(char == "g"):
+                    string = string + "I"
+                elif(char == "G"):
+                    string = string + "U"
+
+                elif(char == "h"):
+                    string = string + "Y"
+                elif(char == "H"):
+                    string = string + "T"
+
+                elif(char == "i"):
+                    string = string + "R"
+                elif(char == "I"):
+                    string = string + "E"
+
+                elif(char == "j"):
+                    string = string + "W"
+                elif(char == "J"):
+                    string = string + "Q"
+
+                elif(char == "k"):
+                    string = string + "l"
+                elif(char == "K"):
+                    string = string + "k"
+
+                elif(char == "l"):
+                    string = string + "j"
+                elif(char == "L"):
+                    string = string + "h"
+
+                elif(char == "m"):
+                    string = string + "g"
+                elif(char == "M"):
+                    string = string + "f"
+
+                elif(char == "n"):
+                    string = string + "d"
+                elif(char == "N"):
+                    string = string + "s"
+
+                elif(char == "o"):
+                    string = string + "a"
+                elif(char == "O"):
+                    string = string + "L"
+                    
+                elif(char == "p"):
+                    string = string + "K"
+                elif(char == "P"):
+                    string = string + "J"
+
+                elif(char == "q"):
+                    string = string + "H"
+                elif(char == "Q"):
+                    string = string + "G"
+
+                elif(char == "r"):
+                    string = string + "F"
+                elif(char == "R"):
+                    string = string + "D"
+
+                elif(char == "s"):
+                    string = string + "S"
+                elif(char == "S"):
+                    string = string + "A"
+
+                elif(char == "t"):
+                    string = string + "m"
+                elif(char == "T"):
+                    string = string + "n"
+
+                elif(char == "u"):
+                    string = string + "b"
+                elif(char == "U"):
+                    string = string + "v"
+
+                elif(char == "v"):
+                    string = string + "c"
+                elif(char == "V"):
+                    string = string + "x"
+
+                elif(char == "w"):
+                    string = string + "z"
+                elif(char == "W"):
+                    string = string + "M"
+
+                elif(char == "x"):
+                    string = string + "N"
+                elif(char == "X"):
+                    string = string + "B"
+
+                elif(char == "y"):
+                    string = string + "V"
+                elif(char == "Y"):
+                    string = string + "C"
+
+                elif(char == "z"):
+                    string = string + "X"
+                elif(char == "Z"):
+                    string = string + "Z"
+
+            return string
+
+        if (mode == "f" or mode == "file"):
+            file = open(string_TOenc)
+            val = file.read()
+            val_enc = code.encoder(val, "s")
+            file.close()
+            file = open(string_TOenc, "w")
+            file.write(val_enc)
+            file.close()
+            return val_enc
         
-    def decoder(string_TOdec):
-        string_dec = ""
-        for pos,char in enumerate(string_TOdec):
-            if(char == "0"):
-                string_dec = string_dec + " "
-            if(char == "1"):
-                string_dec = string_dec + "a"
-            if(char == "2"):
-                string_dec = string_dec + "b"
-            if(char == "3"):
-                string_dec = string_dec + "c"
-            if(char == "4"):
-                string_dec = string_dec + "d"
-            if(char == "5"):
-                string_dec = string_dec + "e"
-            if(char == "6"):
-                string_dec = string_dec + "f"
-            if(char == "7"):
-                string_dec = string_dec + "g"
-            if(char == "8"):
-                string_dec = string_dec + "h"
-            if(char == "9"):
-                string_dec = string_dec + "i"
-            if(char == "A"):
-                string_dec = string_dec + "j"
-            if(char == "B"):
-                string_dec = string_dec + "k"
-            if(char == "C"):
-                string_dec = string_dec + "l"
-            if(char == "D"):
-                string_dec = string_dec + "m"
-            if(char == "E"):
-                string_dec = string_dec + "n"
-            if(char == "F"):
-                string_dec = string_dec + "o"
-            if(char == "G"):
-                string_dec = string_dec + "p"
-            if(char == "H"):
-                string_dec = string_dec + "q"
-            if(char == "I"):
-                string_dec = string_dec + "r"
-            if(char == "J"):
-                string_dec = string_dec + "s"
-            if(char == "K"):
-                string_dec = string_dec + "t"
-            if(char == "L"):
-                string_dec = string_dec + "u"
-            if(char == "M"):
-                string_dec = string_dec + "v"
-            if(char == "N"):
-                string_dec = string_dec + "w"
-            if(char == "O"):
-                string_dec = string_dec + "x"
-            if(char == "P"):
-                string_dec = string_dec + "y"
-            if(char == "Q"):
-                string_dec = string_dec + "z"
+    def decoder(string_TOdec, mode):
+        string = ""
+        if (mode == "s" or mode == "string"):
+            for pos,char in enumerate(string_TOdec):
+                # --------------------------
+                if(char == "0"):
+                    string = string + " "
+                elif(char == "1"):
+                    string = string + "\n"
+                elif(char == "2"):
+                    string = string + "_"
+                elif(char == "3"):
+                    string = string + "-"
+                elif(char == "4"):
+                    string = string + "."
+                elif(char == "5"):
+                    string = string + ":"
+                elif(char == "6"):
+                    string = string + "-"
+                elif(char == "7"):
+                    string = string + ","
+                elif(char == "8"):
+                    string = string + ";"
+                elif(char == '9'):
+                    string = string + '"'
+                # --------------------------
 
-        return string_dec
+                # --------------------------
+                elif(char == "p"):
+                    string = string + "a"
+                elif(char == "o"):
+                    string = string + "A" 
+
+                elif(char == "i"):
+                    string = string + "b"
+                elif(char == "u"):
+                    string = string + "B"
+
+                elif(char == "y"):
+                    string = string + "c"
+                elif(char == "t"):
+                    string = string + "C"
+
+                elif(char == "r"):
+                    string = string + "d"
+                elif(char == "e"):
+                    string = string + "D"
+
+                elif(char == "w"):
+                    string = string + "e"
+                elif(char == "q"):
+                    string = string + "E"
+
+                elif(char == "P"):
+                    string = string + "f"
+                elif(char == "O"):
+                    string = string + "F"
+                
+                elif(char == "I"):
+                    string = string + "g"
+                elif(char == "U"):
+                    string = string + "G"
+
+                elif(char == "Y"):
+                    string = string + "h"
+                elif(char == "T"):
+                    string = string + "H"
+
+                elif(char == "R"):
+                    string = string + "i"
+                elif(char == "E"):
+                    string = string + "I"
+
+                elif(char == "W"):
+                    string = string + "j"
+                elif(char == "Q"):
+                    string = string + "J"
+
+                elif(char == "l"):
+                    string = string + "k"
+                elif(char == "k"):
+                    string = string + "K"
+
+                elif(char == "j"):
+                    string = string + "l"
+                elif(char == "h"):
+                    string = string + "L"
+
+                elif(char == "g"):
+                    string = string + "m"
+                elif(char == "f"):
+                    string = string + "M"
+
+                elif(char == "d"):
+                    string = string + "n"
+                elif(char == "s"):
+                    string = string + "N"
+
+                elif(char == "a"):
+                    string = string + "o"
+                elif(char == "L"):
+                    string = string + "O"
+
+                elif(char == "K"):
+                    string = string + "p"
+                elif(char == "J"):
+                    string = string + "P"
+                    
+                elif(char == "H"):
+                    string = string + "q"
+                elif(char == "G"):
+                    string = string + "Q"
+
+                elif(char == "F"):
+                    string = string + "r"
+                elif(char == "D"):
+                    string = string + "R"
+
+                elif(char == "S"):
+                    string = string + "s"
+                elif(char == "A"):
+                    string = string + "S"
+
+                elif(char == "m"):
+                    string = string + "t"
+                elif(char == "n"):
+                    string = string + "T"
+
+                elif(char == "b"):
+                    string = string + "u"
+                elif(char == "v"):
+                    string = string + "U"
+
+                elif(char == "c"):
+                    string = string + "v"
+                elif(char == "x"):
+                    string = string + "V"
+
+                elif(char == "z"):
+                    string = string + "w"
+                elif(char == "M"):
+                    string = string + "W"
+
+                elif(char == "N"):
+                    string = string + "x"
+                elif(char == "B"):
+                    string = string + "X"
+
+                elif(char == "V"):
+                    string = string + "y"
+                elif(char == "C"):
+                    string = string + "Y"
+
+                elif(char == "X"):
+                    string = string + "z"
+                elif(char == "Z"):
+                    string = string + "Z"
+
+            return string
+
+        if (mode == "f" or mode == "file"):
+            file = open(string_TOdec)
+            val = file.read()
+            val_dec = code.decoder(val, "s")
+            file.close()
+            file = open(string_TOdec, "w")
+            file.write(val_dec)
+            file.close()
+            return val_dec
