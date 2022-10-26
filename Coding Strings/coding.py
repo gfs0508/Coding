@@ -2,6 +2,7 @@
 # For more details visit: https://github.com/GFS-0508/Python-Projects/tree/main/Coding%20Strings
 # Visit my GitHub please: https://github.com/GFS-0508
 
+
 class code:
     def encoder(string_TOenc, mode):
         if (mode == "s" or mode == "string"):
