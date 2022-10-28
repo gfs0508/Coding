@@ -2,6 +2,7 @@
 # For more details visit: https://github.com/GFS-0508/Python-Projects/tree/main/Coding%20Strings
 # Visit my GitHub please: https://github.com/GFS-0508
 
+import os
 
 class code:
     def encoder(string_TOenc, mode):
@@ -29,6 +30,14 @@ class code:
                     string = string + "8"
                 elif(char == '"'):
                     string = string + "9"
+                elif(char == '{'):
+                    string = string + "*"
+                elif(char == '}'):
+                    string = string + "+"
+                elif(char == '('):
+                    string = string + "#"
+                elif(char == ')'):
+                    string = string + "$"
                 # --------------------------
 
                 # --------------------------
@@ -161,7 +170,6 @@ class code:
                     string = string + "X"
                 elif(char == "Z"):
                     string = string + "Z"
-
             return string
 
         if (mode == "f" or mode == "file"):
@@ -173,7 +181,19 @@ class code:
             file.write(val_enc)
             file.close()
             return val_enc
-        
+
+        if (mode == "f+" or mode == "file+"):
+            file2 = open(string_TOenc)
+            val2 = file2.read()
+            val_enc2 = code.encoder(val2, "s")
+            file2.close()
+            file2 = open(string_TOenc, "w")
+            file2.write(val_enc2)
+            file2.close()
+            new_name = code.encoder(file2.name, "s")
+            os.rename(file2.name, new_name)
+            return val_enc2
+
     def decoder(string_TOdec, mode):
         string = ""
         if (mode == "s" or mode == "string"):
@@ -199,6 +219,14 @@ class code:
                     string = string + ";"
                 elif(char == '9'):
                     string = string + '"'
+                elif(char == '*'):
+                    string = string + '{'
+                elif(char == '+'):
+                    string = string + '}'
+                elif(char == '#'):
+                    string = string + '('
+                elif(char == '$'):
+                    string = string + ')'
                 # --------------------------
 
                 # --------------------------
@@ -331,15 +359,33 @@ class code:
                     string = string + "z"
                 elif(char == "Z"):
                     string = string + "Z"
-
             return string
 
         if (mode == "f" or mode == "file"):
             file = open(string_TOdec)
-            val = file.read()
+            val = file.read()            
             val_dec = code.decoder(val, "s")
             file.close()
             file = open(string_TOdec, "w")
             file.write(val_dec)
             file.close()
             return val_dec
+
+        if (mode == "f+" or mode == "file+"):
+            file2 = open(string_TOdec)
+            val2 = file2.read()
+            val_dec2 = code.decoder(val2, "s")
+            file2.close()
+            file2 = open(string_TOdec, "w")
+            file2.write(val_dec2)
+            file2.close()
+            new_name = code.decoder(file2.name, "s")
+            os.rename(file2.name, new_name)
+            return val_dec2
+
+        if (mode == "f-" or mode == "file-"):
+            file3 = open(string_TOdec)
+            val3 = file3.read()
+            val_dec3 = code.decoder(val3, "s")
+            file3.close()
+            return val_dec3
