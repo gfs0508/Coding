@@ -11,6 +11,31 @@ Python Projects - Coding
   
 ## Versions and Updates
 
+### Version 2.0.0
+
+- [x] New encoding method
+- [x] Possibility to change or add an encryption key
+- [x] Possibility to code through a GUI
+- [x] Possibility to start via a command line - cmd or terminal.
+
+> In command line
+
+| Function                     | Encode             | Decode              |
+| -------------                | -------------      |-------------        |
+| Strings                      | -s "String ENC" -e | -s "String Dec" -d  |
+| Files Without Title of file  | -f "file.txt" -e   | -f "fileENC.txt" -d |
+| Files With Title of file     | -f+ "file.txt" -e  | -f+ "fileENC.cef" -d|
+| Files Without Modifications  |                    | -f- "fileENC.cef" -d|
+
+> If you need help, use -h to show the help menu;
+
+> Use -v to show the version;
+
+> Change encryption key
+- Look for "SELECTED_KEY" in "coding.py" and change the variable value to another key string.
+- To make a new string key, write the desired characters into the string. There can only be one character of each.
+- The default key can be modified, possibly it's normal that it doesn't make all the characters.
+
 ### Version 1.2.0
 
 - [x] Added new special characters.
